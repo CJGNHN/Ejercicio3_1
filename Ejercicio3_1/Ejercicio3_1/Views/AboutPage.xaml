@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio3_1.Views.AboutPage"
+             xmlns:vm="clr-namespace:Ejercicio3_1.ViewModels"
+             Title="{Binding Title}">
+    
+
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">green</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Label TextColor="white" Text="Ejericio 3.1" FontSize="Title"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout  VerticalOptions="Center" >
+
+                <Button Padding="20" BackgroundColor="green" CornerRadius="10" VerticalOptions="Center" Text="Visitanos" Command="{Binding OpenWebCommand}"/>
+
+       
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
